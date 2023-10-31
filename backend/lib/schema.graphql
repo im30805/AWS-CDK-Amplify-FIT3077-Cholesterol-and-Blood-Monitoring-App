@@ -1,0 +1,75 @@
+type Patient @model @auth (rules: [{ allow: public }]){
+  id: String!
+  name: String!
+  gender: String!
+  birthDate: String!
+  deceasedDateTime: String
+  address: String!
+  height: heightRecord!
+  weight: weightRecord!
+  BMI: BMIRecord!
+  cholesterolRecord: [cholesterolRecord]
+  bloodPressureRecord: [bloodPressureRecord]
+  heartRateRecord: [heartRateRecord]
+  respiratoryRateRecord: [respiratoryRateRecord]
+  practitionerIdentifier: String!
+  practitioner: String!
+}
+
+type heightRecord {
+  valueQuantity: Float!
+  unit: String!
+}
+
+type weightRecord {
+  valueQuantity: Float!
+  unit: String!
+}
+
+type BMIRecord {
+  valueQuantity: Float!
+  unit: String!
+}
+
+type bloodPressureRecord {
+  recordNumber: Int!
+  valueQuantityDiastolic: Float!
+  valueQuantitySystolic: Float!
+  unitDiastolic: String!
+  unitSystolic: String!
+  issued: String!
+}
+
+type cholesterolRecord {
+  recordNumber: Int!
+  valueQuantity: Float!
+  unit: String!
+  issued: String!
+}
+
+type heartRateRecord {
+  recordNumber: Int!
+  valueQuantity: Float!
+  unit: String!
+  issued: String!
+}
+
+type respiratoryRateRecord {
+  recordNumber: Int!
+  valueQuantity: Float!
+  issued: String!
+  unit: String!
+}
+
+type practitioner @model @auth (rules: [{ allow: public }]){
+  id: String!
+  identifier: String!
+  name: String!
+  address: String!
+  email: String!
+  gender: String!
+  organization: String!
+  organizationIdentifier: String!
+  specialty: String!
+  specialtyCode: String!
+}
