@@ -12,8 +12,7 @@ type Patient @model @auth (rules: [{ allow: public }]){
   bloodPressureRecord: [bloodPressureRecord]
   heartRateRecord: [heartRateRecord]
   respiratoryRateRecord: [respiratoryRateRecord]
-  practitionerIdentifier: String!
-  practitioner: String!
+  practitionersAssigned: [practitioner] @manyToMany(relationName: "PatientsPractitioners")
 }
 
 type heightRecord {
@@ -61,7 +60,23 @@ type respiratoryRateRecord {
   unit: String!
 }
 
-type practitioner @model @auth (rules: [{ allow: public }]){
+type patientDetails {
+  id: String!
+  name: String!
+  gender: String!
+  birthDate: String!
+  deceasedDateTime: String
+  address: String!
+  height: heightRecord!
+  weight: weightRecord!
+  BMI: BMIRecord!
+  cholesterolRecord: [cholesterolRecord]
+  bloodPressureRecord: [bloodPressureRecord]
+  heartRateRecord: [heartRateRecord]
+  respiratoryRateRecord: [respiratoryRateRecord]
+}
+
+type practitionerDetails {
   id: String!
   identifier: String!
   name: String!
@@ -72,4 +87,18 @@ type practitioner @model @auth (rules: [{ allow: public }]){
   organizationIdentifier: String!
   specialty: String!
   specialtyCode: String!
+}
+
+type practitioner @model @auth (rules: [{ allow: public }]) {
+  id: String!
+  identifier: String!
+  name: String!
+  address: String!
+  email: String! @index(name: "byNameAndEmail", sortKeyFields: ["name"], queryField: "practitionerByEmailAndName")
+  gender: String!
+  organization: String!
+  organizationIdentifier: String!
+  specialty: String!
+  specialtyCode: String!
+  patientsAssigned: [Patient] @manyToMany(relationName: "PatientsPractitioners")
 }

@@ -58,8 +58,97 @@ export const createPatient = /* GraphQL */ `
         unit
         __typename
       }
-      practitionerIdentifier
-      practitioner
+      practitionersAssigned {
+        items {
+          id
+          patientId
+          practitionerId
+          patient {
+            id
+            name
+            gender
+            birthDate
+            deceasedDateTime
+            address
+            height {
+              valueQuantity
+              unit
+              __typename
+            }
+            weight {
+              valueQuantity
+              unit
+              __typename
+            }
+            BMI {
+              valueQuantity
+              unit
+              __typename
+            }
+            cholesterolRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            bloodPressureRecord {
+              recordNumber
+              valueQuantityDiastolic
+              valueQuantitySystolic
+              unitDiastolic
+              unitSystolic
+              issued
+              __typename
+            }
+            heartRateRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            respiratoryRateRecord {
+              recordNumber
+              valueQuantity
+              issued
+              unit
+              __typename
+            }
+            practitionersAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          practitioner {
+            id
+            identifier
+            name
+            address
+            email
+            gender
+            organization
+            organizationIdentifier
+            specialty
+            specialtyCode
+            patientsAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -123,8 +212,97 @@ export const updatePatient = /* GraphQL */ `
         unit
         __typename
       }
-      practitionerIdentifier
-      practitioner
+      practitionersAssigned {
+        items {
+          id
+          patientId
+          practitionerId
+          patient {
+            id
+            name
+            gender
+            birthDate
+            deceasedDateTime
+            address
+            height {
+              valueQuantity
+              unit
+              __typename
+            }
+            weight {
+              valueQuantity
+              unit
+              __typename
+            }
+            BMI {
+              valueQuantity
+              unit
+              __typename
+            }
+            cholesterolRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            bloodPressureRecord {
+              recordNumber
+              valueQuantityDiastolic
+              valueQuantitySystolic
+              unitDiastolic
+              unitSystolic
+              issued
+              __typename
+            }
+            heartRateRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            respiratoryRateRecord {
+              recordNumber
+              valueQuantity
+              issued
+              unit
+              __typename
+            }
+            practitionersAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          practitioner {
+            id
+            identifier
+            name
+            address
+            email
+            gender
+            organization
+            organizationIdentifier
+            specialty
+            specialtyCode
+            patientsAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -188,8 +366,97 @@ export const deletePatient = /* GraphQL */ `
         unit
         __typename
       }
-      practitionerIdentifier
-      practitioner
+      practitionersAssigned {
+        items {
+          id
+          patientId
+          practitionerId
+          patient {
+            id
+            name
+            gender
+            birthDate
+            deceasedDateTime
+            address
+            height {
+              valueQuantity
+              unit
+              __typename
+            }
+            weight {
+              valueQuantity
+              unit
+              __typename
+            }
+            BMI {
+              valueQuantity
+              unit
+              __typename
+            }
+            cholesterolRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            bloodPressureRecord {
+              recordNumber
+              valueQuantityDiastolic
+              valueQuantitySystolic
+              unitDiastolic
+              unitSystolic
+              issued
+              __typename
+            }
+            heartRateRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            respiratoryRateRecord {
+              recordNumber
+              valueQuantity
+              issued
+              unit
+              __typename
+            }
+            practitionersAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          practitioner {
+            id
+            identifier
+            name
+            address
+            email
+            gender
+            organization
+            organizationIdentifier
+            specialty
+            specialtyCode
+            patientsAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -212,6 +479,97 @@ export const createPractitioner = /* GraphQL */ `
       organizationIdentifier
       specialty
       specialtyCode
+      patientsAssigned {
+        items {
+          id
+          patientId
+          practitionerId
+          patient {
+            id
+            name
+            gender
+            birthDate
+            deceasedDateTime
+            address
+            height {
+              valueQuantity
+              unit
+              __typename
+            }
+            weight {
+              valueQuantity
+              unit
+              __typename
+            }
+            BMI {
+              valueQuantity
+              unit
+              __typename
+            }
+            cholesterolRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            bloodPressureRecord {
+              recordNumber
+              valueQuantityDiastolic
+              valueQuantitySystolic
+              unitDiastolic
+              unitSystolic
+              issued
+              __typename
+            }
+            heartRateRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            respiratoryRateRecord {
+              recordNumber
+              valueQuantity
+              issued
+              unit
+              __typename
+            }
+            practitionersAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          practitioner {
+            id
+            identifier
+            name
+            address
+            email
+            gender
+            organization
+            organizationIdentifier
+            specialty
+            specialtyCode
+            patientsAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -234,6 +592,97 @@ export const updatePractitioner = /* GraphQL */ `
       organizationIdentifier
       specialty
       specialtyCode
+      patientsAssigned {
+        items {
+          id
+          patientId
+          practitionerId
+          patient {
+            id
+            name
+            gender
+            birthDate
+            deceasedDateTime
+            address
+            height {
+              valueQuantity
+              unit
+              __typename
+            }
+            weight {
+              valueQuantity
+              unit
+              __typename
+            }
+            BMI {
+              valueQuantity
+              unit
+              __typename
+            }
+            cholesterolRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            bloodPressureRecord {
+              recordNumber
+              valueQuantityDiastolic
+              valueQuantitySystolic
+              unitDiastolic
+              unitSystolic
+              issued
+              __typename
+            }
+            heartRateRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            respiratoryRateRecord {
+              recordNumber
+              valueQuantity
+              issued
+              unit
+              __typename
+            }
+            practitionersAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          practitioner {
+            id
+            identifier
+            name
+            address
+            email
+            gender
+            organization
+            organizationIdentifier
+            specialty
+            specialtyCode
+            patientsAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -256,6 +705,583 @@ export const deletePractitioner = /* GraphQL */ `
       organizationIdentifier
       specialty
       specialtyCode
+      patientsAssigned {
+        items {
+          id
+          patientId
+          practitionerId
+          patient {
+            id
+            name
+            gender
+            birthDate
+            deceasedDateTime
+            address
+            height {
+              valueQuantity
+              unit
+              __typename
+            }
+            weight {
+              valueQuantity
+              unit
+              __typename
+            }
+            BMI {
+              valueQuantity
+              unit
+              __typename
+            }
+            cholesterolRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            bloodPressureRecord {
+              recordNumber
+              valueQuantityDiastolic
+              valueQuantitySystolic
+              unitDiastolic
+              unitSystolic
+              issued
+              __typename
+            }
+            heartRateRecord {
+              recordNumber
+              valueQuantity
+              unit
+              issued
+              __typename
+            }
+            respiratoryRateRecord {
+              recordNumber
+              valueQuantity
+              issued
+              unit
+              __typename
+            }
+            practitionersAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          practitioner {
+            id
+            identifier
+            name
+            address
+            email
+            gender
+            organization
+            organizationIdentifier
+            specialty
+            specialtyCode
+            patientsAssigned {
+              nextToken
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          createdAt
+          updatedAt
+          __typename
+        }
+        nextToken
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const createPatientsPractitioners = /* GraphQL */ `
+  mutation CreatePatientsPractitioners(
+    $input: CreatePatientsPractitionersInput!
+    $condition: ModelPatientsPractitionersConditionInput
+  ) {
+    createPatientsPractitioners(input: $input, condition: $condition) {
+      id
+      patientId
+      practitionerId
+      patient {
+        id
+        name
+        gender
+        birthDate
+        deceasedDateTime
+        address
+        height {
+          valueQuantity
+          unit
+          __typename
+        }
+        weight {
+          valueQuantity
+          unit
+          __typename
+        }
+        BMI {
+          valueQuantity
+          unit
+          __typename
+        }
+        cholesterolRecord {
+          recordNumber
+          valueQuantity
+          unit
+          issued
+          __typename
+        }
+        bloodPressureRecord {
+          recordNumber
+          valueQuantityDiastolic
+          valueQuantitySystolic
+          unitDiastolic
+          unitSystolic
+          issued
+          __typename
+        }
+        heartRateRecord {
+          recordNumber
+          valueQuantity
+          unit
+          issued
+          __typename
+        }
+        respiratoryRateRecord {
+          recordNumber
+          valueQuantity
+          issued
+          unit
+          __typename
+        }
+        practitionersAssigned {
+          items {
+            id
+            patientId
+            practitionerId
+            patient {
+              id
+              name
+              gender
+              birthDate
+              deceasedDateTime
+              address
+              createdAt
+              updatedAt
+              __typename
+            }
+            practitioner {
+              id
+              identifier
+              name
+              address
+              email
+              gender
+              organization
+              organizationIdentifier
+              specialty
+              specialtyCode
+              createdAt
+              updatedAt
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      practitioner {
+        id
+        identifier
+        name
+        address
+        email
+        gender
+        organization
+        organizationIdentifier
+        specialty
+        specialtyCode
+        patientsAssigned {
+          items {
+            id
+            patientId
+            practitionerId
+            patient {
+              id
+              name
+              gender
+              birthDate
+              deceasedDateTime
+              address
+              createdAt
+              updatedAt
+              __typename
+            }
+            practitioner {
+              id
+              identifier
+              name
+              address
+              email
+              gender
+              organization
+              organizationIdentifier
+              specialty
+              specialtyCode
+              createdAt
+              updatedAt
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updatePatientsPractitioners = /* GraphQL */ `
+  mutation UpdatePatientsPractitioners(
+    $input: UpdatePatientsPractitionersInput!
+    $condition: ModelPatientsPractitionersConditionInput
+  ) {
+    updatePatientsPractitioners(input: $input, condition: $condition) {
+      id
+      patientId
+      practitionerId
+      patient {
+        id
+        name
+        gender
+        birthDate
+        deceasedDateTime
+        address
+        height {
+          valueQuantity
+          unit
+          __typename
+        }
+        weight {
+          valueQuantity
+          unit
+          __typename
+        }
+        BMI {
+          valueQuantity
+          unit
+          __typename
+        }
+        cholesterolRecord {
+          recordNumber
+          valueQuantity
+          unit
+          issued
+          __typename
+        }
+        bloodPressureRecord {
+          recordNumber
+          valueQuantityDiastolic
+          valueQuantitySystolic
+          unitDiastolic
+          unitSystolic
+          issued
+          __typename
+        }
+        heartRateRecord {
+          recordNumber
+          valueQuantity
+          unit
+          issued
+          __typename
+        }
+        respiratoryRateRecord {
+          recordNumber
+          valueQuantity
+          issued
+          unit
+          __typename
+        }
+        practitionersAssigned {
+          items {
+            id
+            patientId
+            practitionerId
+            patient {
+              id
+              name
+              gender
+              birthDate
+              deceasedDateTime
+              address
+              createdAt
+              updatedAt
+              __typename
+            }
+            practitioner {
+              id
+              identifier
+              name
+              address
+              email
+              gender
+              organization
+              organizationIdentifier
+              specialty
+              specialtyCode
+              createdAt
+              updatedAt
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      practitioner {
+        id
+        identifier
+        name
+        address
+        email
+        gender
+        organization
+        organizationIdentifier
+        specialty
+        specialtyCode
+        patientsAssigned {
+          items {
+            id
+            patientId
+            practitionerId
+            patient {
+              id
+              name
+              gender
+              birthDate
+              deceasedDateTime
+              address
+              createdAt
+              updatedAt
+              __typename
+            }
+            practitioner {
+              id
+              identifier
+              name
+              address
+              email
+              gender
+              organization
+              organizationIdentifier
+              specialty
+              specialtyCode
+              createdAt
+              updatedAt
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deletePatientsPractitioners = /* GraphQL */ `
+  mutation DeletePatientsPractitioners(
+    $input: DeletePatientsPractitionersInput!
+    $condition: ModelPatientsPractitionersConditionInput
+  ) {
+    deletePatientsPractitioners(input: $input, condition: $condition) {
+      id
+      patientId
+      practitionerId
+      patient {
+        id
+        name
+        gender
+        birthDate
+        deceasedDateTime
+        address
+        height {
+          valueQuantity
+          unit
+          __typename
+        }
+        weight {
+          valueQuantity
+          unit
+          __typename
+        }
+        BMI {
+          valueQuantity
+          unit
+          __typename
+        }
+        cholesterolRecord {
+          recordNumber
+          valueQuantity
+          unit
+          issued
+          __typename
+        }
+        bloodPressureRecord {
+          recordNumber
+          valueQuantityDiastolic
+          valueQuantitySystolic
+          unitDiastolic
+          unitSystolic
+          issued
+          __typename
+        }
+        heartRateRecord {
+          recordNumber
+          valueQuantity
+          unit
+          issued
+          __typename
+        }
+        respiratoryRateRecord {
+          recordNumber
+          valueQuantity
+          issued
+          unit
+          __typename
+        }
+        practitionersAssigned {
+          items {
+            id
+            patientId
+            practitionerId
+            patient {
+              id
+              name
+              gender
+              birthDate
+              deceasedDateTime
+              address
+              createdAt
+              updatedAt
+              __typename
+            }
+            practitioner {
+              id
+              identifier
+              name
+              address
+              email
+              gender
+              organization
+              organizationIdentifier
+              specialty
+              specialtyCode
+              createdAt
+              updatedAt
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
+      practitioner {
+        id
+        identifier
+        name
+        address
+        email
+        gender
+        organization
+        organizationIdentifier
+        specialty
+        specialtyCode
+        patientsAssigned {
+          items {
+            id
+            patientId
+            practitionerId
+            patient {
+              id
+              name
+              gender
+              birthDate
+              deceasedDateTime
+              address
+              createdAt
+              updatedAt
+              __typename
+            }
+            practitioner {
+              id
+              identifier
+              name
+              address
+              email
+              gender
+              organization
+              organizationIdentifier
+              specialty
+              specialtyCode
+              createdAt
+              updatedAt
+              __typename
+            }
+            createdAt
+            updatedAt
+            __typename
+          }
+          nextToken
+          __typename
+        }
+        createdAt
+        updatedAt
+        __typename
+      }
       createdAt
       updatedAt
       __typename
